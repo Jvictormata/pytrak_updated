@@ -58,8 +58,8 @@ class TrakSTAR:
             strings.append(s)
         return '|'.join(strings)
 
-    def get_pose(self):
-        return self.interface.get_synchronous_data_dict()[1]
+    def get_pose(self,sensor):
+        return self.interface.get_synchronous_data_dict()[sensor]
 
 import time
 
@@ -72,4 +72,5 @@ import time
 
 #while True:
 #    print(aaa.measure())
+#    print(aaa.get_pose(1))
 #    time.sleep(0.5)
